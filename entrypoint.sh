@@ -42,6 +42,8 @@ echo " - Commits $len: $list"
 echo
 echo -e "\e[0;34mStart review for each commits.\e[0m"
 
+git config --global --add safe.directory "$GITHUB_WORKSPACE"
+
 i=1
 for sha1 in $list; do
     echo "-------------------------------------------------------------"
